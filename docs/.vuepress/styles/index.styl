@@ -1,0 +1,66 @@
+:root {
+    --rainbow-gradient: linear-gradient(-90deg,#adfbda 0,#35c3ff 30%,#fda399 50%,#76d880 70%,#ebf38b 90%,#adfbda 100%);
+
+}
+
+#app > div.theme-container.no-sidebar > div > div:nth-child(2) > div:nth-child(5) > div.home-blog > div.hero > div > p {
+        width: 0;
+        font-size: 30px;
+        /* 强制文本一行显示 */
+        white-space: nowrap;
+        /* 移除部分隐藏，模拟视觉弹出效果 */
+        overflow: hidden;
+        /* background-color: aqua; */
+        /* 动画效果   共4秒分12步，每一步的宽度为字体的大小（宽度），停止在结束位置 */
+        animation: ballText 3s steps(12) infinite alternate;
+        /* 替换为infinite则为无限循环动画 */
+        /* animation: ballText 4s steps(12) infinite; */
+    }
+
+    #app > div.theme-container.no-sidebar > div > div:nth-child(2) > div:nth-child(5) > div.home-blog > div.hero > div > p::after {
+        content: "|";
+        display: inline-block;
+        width: 0;
+        height: 100%;
+        background:gold;
+        animation: symbolInput  1s infinite alternate;
+    }
+ @keyframes ballText {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: 360px;
+        }
+    }
+
+    @keyframes symbolInput {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+
+.dark .content__default code {
+    background-color: rgba(58,58,92,0.7);
+    color: #fff;
+}
+
+
+
+#app > div.theme-container.no-sidebar > div > div:nth-child(2) > div:nth-child(5) > div.home-blog > div.hero > div > p {
+  background-image: var(--rainbow-gradient,#fff);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  filter: drop-shadow(0 0 2rem #000);
+  text-shadow: none!important;
+}
+
