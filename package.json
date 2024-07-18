@@ -4,7 +4,7 @@
   "author": "reco_luan",
   "scripts": {
     "dev:docs": "vuepress dev docs",
-    "build:docs": "vuepress build docs"
+    "build:docs": "set NODE_OPTIONS=--openssl-legacy-provider & vuepress build docs"
   },
   "devDependencies": {
     "@vuepress-reco/vuepress-plugin-kan-ban-niang": "^1.0.5",

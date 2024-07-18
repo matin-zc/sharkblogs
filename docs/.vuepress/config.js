@@ -19,15 +19,9 @@ module.exports = {
         content: "width=device-width,initial-scale=1,user-scalable=no",
       },
     ],
-    // 引入鼠标点击脚本
-    ["script", {
-      language: "javascript",
-      type: "text/javascript",
-      src: "/js/MouseClickEffect.js"
-    }]
   ],
   theme: "reco",
-  base: '/',
+  base: '/sharkblogs/',
   locales: {
     "/": {
       lang: "zh-CN"
